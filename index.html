@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <h3>Weather forecast</h3>
+        <p id="date">Sunday, 6th of March 2022, 12:19PM</p>
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Search city here"
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Current location"
+                class="btn btn-success shadow-sm w-100"
+                id="current-location-button"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <h1 id="city">Brisbane, Australia</h1>
+        <p id="description">Partly cloudy</p>
+        <span class="temperature" id="temperature"></span>
+        <span class="units"
+          ><a href="#" id="celsius-link">°C</a> |
+          <a href="#" id="fahrenheit-link">°F</a>
+        </span>
+        <img src="src/partly_cloudy.jpg" alt="Partly cloudy" />
+        <ul>
+          <li>Humidity: <span id="humidity"></span>%</li>
+          <li>Wind: <span id="wind"></span>km/h</li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary active" aria-current="page">Today</a>
+        <a href="#" class="btn btn-primary">5-day forecast</a>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="src/partly_cloudy.jpg"
+              class="card-img-top"
+              alt="Partly cloudy"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Monday</h5>
+              <p class="card-text">
+                <span class="max_temperature">31°C</span><br />21°C
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="src/heavy_rain.jpg"
+              class="card-img-top"
+              alt="Heavy rain"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tuesday</h5>
+              <p class="card-text">
+                <span class="max_temperature">26°C</span><br />19°C
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="src/cloudy.jpg" class="card-img-top" alt="Cloudy" />
+            <div class="card-body">
+              <h5 class="card-title">Wednesday</h5>
+              <p class="card-text">
+                <span class="max_temperature">29°C</span><br />21°C
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="src/sun.jpg" class="card-img-top" alt="Sunny" />
+            <div class="card-body">
+              <h5 class="card-title">Thursday</h5>
+              <p class="card-text">
+                <span class="max_temperature">33°C</span><br />27°C
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="src/light_rain.jpg" class="Light rain" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Friday</h5>
+              <p class="card-text">
+                <span class="max_temperature">28°C</span><br />18°C
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
