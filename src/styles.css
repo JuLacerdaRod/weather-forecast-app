@@ -34,7 +34,7 @@ li {
   font-weight: 400;
 }
 
-#description {
+#description::first-letter {
   text-transform: capitalize;
 }
 
