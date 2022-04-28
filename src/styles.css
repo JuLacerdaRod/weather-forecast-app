@@ -34,7 +34,8 @@ li {
   font-weight: 400;
 }
 
-.weather-icon {
+#description {
+  text-transform: capitalize;
 }
 
 .units {
